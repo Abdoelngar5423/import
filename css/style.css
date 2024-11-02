@@ -1,0 +1,634 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Raleway';
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+:root {
+  --firstColor: rgb(220, 13, 220);
+  --secondColor:  rgb(255, 48, 82);
+  --thirdColor: rgb(99, 99, 99);
+}
+/* Globale Rules */
+.main-header {
+  text-align: center;
+}
+.main-header h2 {
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+}
+.main-header p {
+  padding-left: 200px;
+  padding-right: 200px;
+  line-height: 1.7;
+  color: white;
+  margin-top: 40px;
+  font-weight: 500;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* Globale Rules */
+/* Start Navigation-bar */
+header {
+  height: 80px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 50px;
+
+}
+header .container h2 .one {
+  width: 20px;
+  height: 20px;
+  background-color: var(--firstColor);
+  display: inline-block;
+  box-shadow: 10px 10px 0 0 var(--secondColor);
+  margin-right: 15px;
+}
+header .container h2 {
+  font-size: 30px;
+  font-weight: 600;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+header .container h2 .two {
+  color: var(--firstColor);
+}
+header .container h2 .three {
+  color: var(--secondColor);
+}
+header .container nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+header .container nav .links {
+  display: flex;
+}
+header .container nav .links li a {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  text-transform: capitalize;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  transition: 0.3s;
+}
+header .container nav .links li .active {
+  color: var(--secondColor);
+}
+header .container nav .links li a:hover {
+  color: var(--secondColor);
+}
+/* End Navigation-bar */
+/* Start Landing */
+section .landing {
+  background-image: url(../imgs/banner-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section .landing .container {
+  text-align: center;
+  padding: 0 250px;
+}
+section .landing .container h2 {
+  font-size: 40px;
+  font-weight: normal;
+  color: white;
+  padding: 0 40px;
+}
+section .landing .container p {
+  color: white;
+  margin-top: 40px;
+  font-weight: 500;
+}
+section .landing .container button {
+  margin-top: 40px;
+  border: none;
+  padding: 20px 40px;
+  background-color: var(--secondColor);
+  color: white;
+  border-radius: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+section .landing .container button:hover {
+  background-color: white;
+  color: var(--secondColor);
+}
+/* End Landing */
+/* start Features */
+section .features {
+  position: relative;
+  z-index: 3;
+  top: -100px;
+}
+section .features .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  
+}
+section .features .container .box {
+  width: 320px;
+  height: 250px;
+  background-color: white;
+  box-shadow: 0 0 10px 0 gray;
+  text-align: center;
+  border-radius: 15px;
+  padding: 30px 15px;
+}
+section .features .container .box .icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--firstColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+section .features .container .box .icon i {
+  font-size: 30px;
+  color: white;
+}
+section .features .container .box .text {
+  margin-top: 25px;
+}
+section .features .container .box .text h2 {
+  font-weight: 500;
+}
+section .features .container .box .text p {
+  margin-top: 20px;
+  font-size: 15px;
+  color: rgb(99, 99, 99);
+  line-height: 1.6;
+}
+section .features .container .data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+section .features .container .data .image {
+  width: 48%;
+  text-align: center;
+}
+section .features .container .data .text {
+  width: 48%;
+}
+section .features .container .data .text h2 {
+  font-weight: 500;
+}
+section .features .container .data .text p {
+  margin-top: 40px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: rgb(99, 99, 99);
+}
+/* End Features */
+/* Start Work Process */
+section .work-pro {
+  background-image: url(../imgs/work-process-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+section .work-pro .boxs {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+section .work-pro .boxs .box {
+  width: 150px;
+  height: 210px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 0 rgba(255, 255, 255, 0.267);
+  background-color: white;
+  margin-left: 20px;
+  text-align: center;
+  padding: 30px 20px;
+}
+section .work-pro .boxs .box i {
+  font-size: 30px;
+  color: var(--firstColor);
+}
+section .work-pro .boxs .box .text {
+  margin-top: 20px;
+}
+section .work-pro .boxs .box .text h3 {
+  font-weight: 500;
+}
+section .work-pro .boxs .box .text p {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: var(--thirdColor);
+  font-weight: bold;
+}
+/* End Work Process */
+/* Start Section-4 */
+section .section-4 {
+  padding-top: 80px;
+  min-height: 100vh;
+}
+section .section-4 .container .main-header h2,
+section .section-4 .container .main-header p {
+  color: black;
+}
+section .section-4 .container .boxs  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+section .section-4 .container .box {
+  width: 325px;
+  height: 275px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0 gray;
+  margin-left: 20px;
+  padding: 20px;
+  text-align: center;
+}
+section .section-4 .container .box i {
+  margin: 0 auto;
+  font-size: 30px;
+  color: var(--firstColor);
+}
+section .section-4 .container .box .text {
+  text-align: left;
+  margin-top: 20px;
+}
+section .section-4 .container .box .text p {
+  font-weight: bold;
+  color: var(--thirdColor);
+  line-height: 1.6;
+}
+section .section-4 .container .image {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+section .section-4 .container .image .img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+section .section-4 .container .image .one {
+  background-image: url(../imgs/portrait-friendly-looking-happy-attractive-male-model-with-moustache-beard-wearing-trendy-transparent-glasses-smiling-broadly-while-listening-interesting-story-waiting-mom-give-meal.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+section .section-4 .container .image .two {
+  background-image: url(../imgs/cheerful-positive-glad-man-has-broad-smile-rejoices-promotion-work.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+section .section-4 .container .image .three {
+  background-image: url(../imgs/portrait-friendly-looking-happy-attractive-male-model-with-moustache-beard-wearing-trendy-transparent-glasses-smiling-broadly-while-listening-interesting-story-waiting-mom-give-meal.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+section .section-4 .container .image .data {
+  margin-left: 15px;
+}
+section .section-4 .container .image .data h3 {
+  font-weight: 500;
+}
+section .section-4 .container .image .data span {
+  color: var(--secondColor);
+  font-weight: 500;
+}
+/* End Section-4 */
+/* Start pricing */
+section .pricing {
+  min-height: 100vh;
+  background-color: rgb(235, 231, 231);
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+section .pricing .container .main-header h2,
+section .pricing .container .main-header p {
+  color: black;
+}
+section .pricing .container .boxs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 70px;
+}
+section .pricing .container .boxs .box {
+  width: 350px;
+  height: 580px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 8px 0 gray;
+  margin-left: 25px;
+  padding: 20px;
+  text-align: center;
+}
+section .pricing .container .boxs .box h3 {
+  font-weight: 500;
+}
+section .pricing .container .boxs .box .cost {
+  margin-top: 30px;
+  height: 100px;
+  color: white;
+  border-radius: 15px;
+  padding: 23px;
+}
+section .pricing .container .boxs .box .one {
+  background-color: var(--firstColor);
+}
+section .pricing .container .boxs .box .two {
+  background-color: var(--secondColor);
+}
+section .pricing .container .boxs .box .three {
+  background-color: var(--firstColor);
+}
+section .pricing .container .boxs .box .cost p {
+  font-size: 30px;
+  font-weight: 500;
+}
+section .pricing .container .boxs .box .cost span {
+  display: block;
+  margin-top: 10px;
+}
+section .pricing .container .boxs .box ul {
+  margin-top: 40px;
+}
+section .pricing .container .boxs .box ul li {
+  font-size: 18px;
+  color: var(--thirdColor);
+  font-weight: 600;
+  padding: 10px;
+}
+section .pricing .container .boxs .box button {
+  border: none;
+  padding: 20px 50px;
+  background-color: var(--firstColor);
+  color: white;
+  margin-top: 40px;
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+section .pricing .container .boxs .box button:hover {
+  background-color: rgba(220, 13, 220, 0.361);
+  color: var(--firstColor);
+}
+/* End pricing */
+/* Start Section-6 */
+section .section-6 {
+  background-image: url(../imgs/fun-facts-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+section .section-6 .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+section .section-6 .container .text {
+  text-align: center;
+  color: white;
+}
+section .section-6 .container .text p {
+  font-size: 50px;
+  font-weight: 600;
+}
+section .section-6 .container .text span {
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+}
+/* End Section-6 */
+/* Start Blog */
+section .blog {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+section .blog .container .main-header h2,
+section .blog .container .main-header p {
+  color: black;
+}
+section .blog .container .boxs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+section .blog .container .boxs .box:not(:first-child) {
+  margin-left: 20px;
+}
+section .blog .container .boxs .box {
+  text-align: center;
+}
+section .blog .container .boxs .box .text {
+  padding: 0 20px;
+  margin-top: 30px;
+}
+section .blog .container .boxs .box .text p {
+  color: var(--thirdColor);
+  line-height: 1.6;
+  margin-top: 20px;
+  font-weight: 600;
+}
+section .blog .container .boxs .box button {
+  border: none;
+  margin-top: 30px;
+  padding: 20px 40px;
+  color: white;
+  background-color: var(--firstColor);
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+section .blog .container .boxs .box button:hover {
+  background-color: rgba(220, 13, 220, 0.361);
+  color: var(--firstColor);
+}
+/* End Blog */
+/* Start Contact Us */
+section .contact {
+  padding-top: 80px;
+  background-color: rgb(233, 209, 255);
+  padding-bottom: 80px;
+}
+section .contact .container .main-header h2,
+section .contact .container .main-header p {
+  color: black;
+}
+section .contact .container .data {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+}
+section .contact .container .data .text {
+  width: 35%;
+}
+section .contact .container .data .text h3 {
+  font-size: 30px;
+  font-weight: 500;
+}
+section .contact .container .data .text p {
+  margin-top: 40px;
+  line-height: 1.6;
+  word-spacing: 2px;
+  color: var(--thirdColor);
+  font-weight: 600;
+}
+section .contact .container .data form {
+  width: 65%;
+}
+section .contact .container .data form .info input {
+  border: none;
+  outline: none;
+  width: 350px;
+  height: 50px;
+  padding: 20px;
+  border-radius: 30px;
+  caret-color: var(--firstColor);
+  margin-left: 10px;
+}
+section .contact .container .data form .info input::placeholder {
+  font-weight: 500;
+}
+section .contact .container .data form .textarea {
+  width: 90%;
+  height: 250px;
+  margin-left: 30px;
+  border-radius: 30px;
+  padding: 20px;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+}
+section .contact .container .data form .textarea::placeholder {
+  font-weight: 500;
+}
+section .contact .container .data form .submit {
+  margin-left: 40px;
+  margin-top: 30px;
+  border: none;
+  color: white;
+  background-color: var(--firstColor);
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 18px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+section .contact .container .data form .submit:hover {
+  background-color: rgba(220, 13, 220, 0.361);
+  color: var(--firstColor);
+}
+/* End Contact Us */
+/* Start Footer */
+footer .footer {
+  background-color: var(--firstColor);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+footer .footer .container .icons i {
+  font-size: 30px;
+  color: white;
+  margin-left: 20px;
+}
+footer .footer .container .line {
+  width: 80%;
+  height: 0.5px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+footer .footer .container p {
+  margin-top: 30px;
+  color: white;
+  font-size: 18px;
+}
+/* End Footer */
+.up {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: purple;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+.up a {
+  color: white;
+  font-size: 30px;
+}
